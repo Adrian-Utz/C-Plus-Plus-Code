@@ -4,7 +4,7 @@ using namespace std;
 
 int binaryToDecimal(int n) {
     int decimalNumber = 0;
-    int base = 1; // Initialize base value to 1, i.e., 2^0
+    int base = 1; // Initialize base value to 1 (2^0)
     
     while (n){
         int lastDigit = n % 10; // Get the last digit of the binary number

@@ -13,6 +13,7 @@ public:
     bool pickles = false;
     bool tomato = false;
     bool cheese = false; // New topping
+    bool bacon = false; // New topping
     
 
     // Method to loop and choose toppings
@@ -30,7 +31,8 @@ public:
             cout << "7. Pickles\n";
             cout << "8. Tomato\n";
             cout << "9. Cheese\n";
-            cout << "10. Finish selection\n";
+            cout << "10. Bacon\n";
+            cout << "11. Finish selection\n";
             cout << "Enter choice: ";
             cin >> choice;
 
@@ -59,13 +61,14 @@ public:
                 case 7: pickles = true; break;
                 case 8: tomato = true; break;
                 case 9: cheese = true; break;
-                case 10: 
+                case 10: bacon = true; break;
+                case 11: 
                     cout << "Topping selection complete.\n";
                     break;
                 default:
                     cout << "Invalid choice. Please try again.\n";
             }
-        } while (choice != 10);
+        } while (choice != 11);
     }
 
     // Method to display the final burger order
@@ -76,6 +79,7 @@ public:
         if (meat) cout << "Type: Meat\n";
         if (vegetarian) cout << "Type: Vegetarian\n";
         
+        // Displaying the selected toppings
         cout << "Toppings:\n";
         bool hasToppings = false;
         if (ketchup) { cout << "- Ketchup\n"; hasToppings = true; }
@@ -85,6 +89,7 @@ public:
         if (pickles) { cout << "- Pickles\n"; hasToppings = true; }
         if (tomato) { cout << "- Tomato\n"; hasToppings = true; }
         if (cheese) { cout << "- Cheese\n"; hasToppings = true; }
+        if (bacon) { cout << "- Bacon\n"; hasToppings = true;}
 
         if (!hasToppings) {
             cout << "- No toppings selected.\n";
