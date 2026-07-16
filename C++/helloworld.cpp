@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main()
+int hellomain()
 {
     vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
 
@@ -13,4 +13,5 @@ int main()
         cout << word << " ";
     }
     cout << endl;
+    return 0;
 }

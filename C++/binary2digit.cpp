@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 //This function converts a binary number to a decimal number
 
 int binaryToDecimal(int n) {
@@ -10,7 +10,7 @@ int binaryToDecimal(int n) {
         int lastDigit = n % 10; // Get the last digit of the binary number
 
         if(lastDigit != 0 && lastDigit !=1){
-            std::cerr << "Invalid Binary Number\n";
+            cerr << "Invalid Binary Number\n";
             return -1; // Return -1 to indicate an error
         }
 
@@ -20,4 +20,15 @@ int binaryToDecimal(int n) {
     }
 
     return decimalNumber; // Return the final decimal number
+}
+
+int b2dmain(){
+    int n;
+    cout << "Enter a binary number: ";
+    cin >> n;
+
+    int decimalNumber = binaryToDecimal(n);
+    cout << "The decimal equivalent of binary " << n << " is: " << decimalNumber << endl;
+
+    return 0;
 }
