@@ -5,11 +5,12 @@ using namespace std;
 #include "helloworld.cpp"
 #include "burgermaker.cpp"
 #include "keytranslator.cpp"
+#include "dinojump.cpp"
 /*
 Written on 7-15-2026
 Written by: AJ Utz
 
-Last Update: 7-16-2026
+Last Update: 7-20-2026
 */
 
 //Starting location
@@ -21,6 +22,7 @@ int main(){
         cout << "2. Burger Maker\n";
         cout << "3. Hello World\n";
         cout << "4. Key Translator\n";
+        cout << "5. Dino Jump\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
 
@@ -42,6 +44,10 @@ int main(){
                 break;
             case 4:
                 keymain();
+                cout << endl;
+                break;
+            case 5:
+                dinoMain();
                 cout << endl;
                 break;
             default:
