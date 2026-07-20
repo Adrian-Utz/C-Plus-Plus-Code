@@ -15,3 +15,6 @@ helloworld.cpp - Classic
 
 keytranslator.cpp - Tells you the values of a pressed key.
 E.G. "A" equals 97 in ASCII and 01100001 in binary.
+
+dinojump.cpp - Command line dino game
+Space is jump.
