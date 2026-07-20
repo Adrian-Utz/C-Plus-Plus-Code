@@ -18,6 +18,10 @@ vector<string> buffer(
     string(SCREEN_WIDTH, ' ')
 );
 
+/*
+Draw the sprite using screen buffer. First go through each row and column, skip transparent pixles,
+then calculate screen position. Prevent writting outside of the border, then draw the characters
+*/
 void drawSprite(
     vector<string>& buffer,
     const vector<string>& sprite,
@@ -137,6 +141,7 @@ int dinoMain() {
     int groundOffset = 0;
 
     while(true){
+        //Jumping logic
         if(_kbhit()){
             char ch = _getch();
 
@@ -145,7 +150,7 @@ int dinoMain() {
                 velocityY = JUMP_FORCE;
             }
         }
-
+        //So you can't double jump
         if(jumping){
             dinoY += velocityY;
             velocityY += GRAVITY;
@@ -166,6 +171,7 @@ int dinoMain() {
             dinoY
         );
         
+        //Get the measurements of the cactus for collision
         int cactusY;
         int cactusWidth;
         int cactusHeight;
@@ -180,6 +186,7 @@ int dinoMain() {
             cactusHeight = gfx.cactus.size();
         }
 
+        //Same for the dino
         int dinoWidth = 0;
 
         for(const auto& row : gfx.dino){
@@ -213,9 +220,11 @@ int dinoMain() {
 
         renderBuffer(buffer);
 
+        //Set the ground movement speed
         groundOffset += groundSpeed;
         groundOffset %= gfx.ground.size();
         
+        //Set the Cactus' speed
         cactusX -= cactusSpeed;
         if(cactusX < -10){
             cactusX = SCREEN_WIDTH + 20 + (rand() % 60);
@@ -246,6 +255,7 @@ int dinoMain() {
             break;
         }
 
+        //Game speed
         this_thread::sleep_for(
             chrono::milliseconds(50)
         );
