@@ -10,6 +10,8 @@
 using namespace std;
 
 //My version of the 2D Dino Jump game in the command line, or terminal.
+
+//Basline Width=120 and Height=30
 const int SCREEN_WIDTH = 120;
 const int SCREEN_HEIGHT = 30;
 
@@ -41,7 +43,7 @@ void drawSprite(
         }
     }
 }
-
+//Seperate draw function for the ground. This one handles strings.
 void drawGround(
     vector<string>& buffer,
     const string& ground,
@@ -98,13 +100,14 @@ Graphics graphics(){
         "   | |",
         "   |_|"
     };
-    g.ground = "_________/\\____________________/\\_________/|\\___________________________________________/||\\_____________________";
     g.smallCactus = {
         "__",
         "| |_____",
         "|___  _|",
         "    |_|"
     };
+    //Make the ground a string so the inividual chars can be manipulated.
+    g.ground = "_________________/\\_______________/\\______________________________________/\\__________________________________________/\\";
 
     return g;
 }
@@ -121,11 +124,13 @@ bool checkCollision(
     );
 }
 
+//Start of Main
 int dinoMain() {  
     srand(time(nullptr));
-    //Start by opening a terminal.
+    
     Graphics gfx = graphics();
 
+    //Dino info and jump/gravity
     int dinoX = 5;
     int dinoY = 15;
     bool jumping = false;
@@ -140,7 +145,13 @@ int dinoMain() {
     int cactusX = 100;
     int groundOffset = 0;
 
+    time_t startTime = time(NULL);
+
     while(true){
+        //Score based on how many seconds survived, printed out at the Game over screen
+        time_t currentTime = time(NULL);
+        int score = (int)difftime(currentTime, startTime);
+
         //Jumping logic
         if(_kbhit()){
             char ch = _getch();
@@ -163,6 +174,14 @@ int dinoMain() {
         }
 
         clearBuffer(buffer);
+        
+        //Moved ground to begining so it gets printed in the behind the dino and cactus
+        drawGround(
+            buffer,
+            gfx.ground,
+            groundOffset,
+            22
+        );
 
         drawSprite(
             buffer,
@@ -211,12 +230,6 @@ int dinoMain() {
             );
         }
 
-        drawGround(
-            buffer,
-            gfx.ground,
-            groundOffset,
-            25
-        );
 
         renderBuffer(buffer);
 
@@ -252,6 +265,7 @@ int dinoMain() {
         ){
             system("cls");
             cout << "GAME OVER\n";
+            printf("\rScore: %d", score);
             break;
         }
 
