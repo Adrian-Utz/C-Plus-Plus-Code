@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bitset>
 
 using namespace std;
 
@@ -7,29 +8,38 @@ This should function as follows: It will ask the user to input a key from their 
 Then it will output data that corresponds to the pressed key. ASCII values, binary values, Hexadecimal values, ect.
 */
 
-int keytranslation(char key){
-    cout << "You pressed the key: " << key << endl;
-    cout << "ASCII value: " << static_cast<int>(key) << endl;
+void displayKeyInfo() {
+    char key;
 
-    cout << "Binary value: ";
-    for (int i = 7; i >= 0; --i) {
-        cout << ((static_cast<int>(key) >> i) & 1);
-    }
-    cout << endl;
+    // Prompt the user to press a key
+    cout << "Press any key to see its ASCII, binary, and decimal values: ";
+    cin >> key; // Read a single character from the keyboard
 
-    cout << "Hexadecimal value: " << hex << static_cast<int>(key) << endl;
+    // Display the ASCII value
+    cout << "ASCII Value: " << static_cast<int>(key) << "\n";
 
-    cout << "Octal value: " << oct << static_cast<int>(key) << endl;
+    // Display the binary representation using std::bitset
+    cout << "Binary Representation: " << std::bitset<8>(static_cast<unsigned char>(key)) << "\n";
 
-    cout << "Decimal value: " << dec << static_cast<int>(key) << endl;
-
-    return 0;
+    // Note: The above uses 8 bits because std::bitset is designed for fixed-width binary representations.
+    // If you need a different number of bits, adjust the template parameter accordingly (e.g.,`bitset<16>`).
 }
 
 int keymain() {
-    char key;
-    cout << "Press a key on your keyboard: ";
-    cin >> key;
+    displayKeyInfo();
+    while(true){
+        char retry;
+        cout << "Try Again? (y/n): ";
+        cin >> retry;
 
-    return keytranslation(key);
+        if(retry == 'y'){
+            displayKeyInfo();
+        }else if (retry == 'n'){
+            return 0;
+        }else{
+            cout << "Please reply with y or n." << '\n';
+            continue;
+        }
+    }
+    return 0;
 }
