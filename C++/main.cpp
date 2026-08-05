@@ -6,11 +6,12 @@ using namespace std;
 #include "burgermaker.cpp"
 #include "keytranslator.cpp"
 #include "dinojump.cpp"
+#include "typingtest.cpp"
 /*
-Written on 7-15-2026
+Written on 7/15/2026
 Written by: AJ Utz
 
-Last Update: 7-20-2026
+Last Update: 8/5/2026
 */
 
 //Starting location
@@ -23,6 +24,7 @@ int main(){
         cout << "3. Hello World\n";
         cout << "4. Key Translator\n";
         cout << "5. Dino Jump\n";
+        cout << "6. Typing Test\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
 
@@ -48,6 +50,10 @@ int main(){
                 break;
             case 5:
                 dinoMain();
+                cout << endl;
+                break;
+            case 6:
+                typingMain();
                 cout << endl;
                 break;
             default:
