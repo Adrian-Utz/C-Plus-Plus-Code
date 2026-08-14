@@ -21,4 +21,6 @@ Space is jump.
 
 typingtest.cpp - Test you typing skills  
 Customize the txt file with the same name to your hearts content.  
-I tried making a copy and paste anti-function, but I don't know if it worked. It didn't work in VScode's terminal.
+I tried making a copy and paste anti-function, but I don't know if it worked. It didn't work in VScode's terminal.  
+
+stopwatch.cpp - It's a stopwatch. What did you expect?
