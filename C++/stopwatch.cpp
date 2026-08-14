@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <chrono>
+#include <ctype.h>
 
 #ifdef min
 #undef min
@@ -8,12 +9,14 @@
 
 using namespace std;
 
+//Initialize varaibles
 std::chrono::time_point<std::chrono::steady_clock> start_time;
 std::chrono::time_point<std::chrono::steady_clock> pause_time = std::chrono::time_point<std::chrono::steady_clock>::min();
 std::chrono::time_point<std::chrono::steady_clock> end_time;
 bool timerRunning = false;
 bool timerStarted = false;
 
+//If the timer is not running, activate it. 
 void startTimer(){
     if(!timerRunning){
         start_time = std::chrono::high_resolution_clock::now();
@@ -24,6 +27,7 @@ void startTimer(){
     }
 }
 
+//If timer is running, stop it and record the current end time.
 void stopTimer(){
     if(timerStarted){
         end_time = std::chrono::high_resolution_clock::now();
@@ -33,6 +37,7 @@ void stopTimer(){
     }
 }
 
+// If the timer is running, record the time at which it was paused, and set the running bool to false.
 void pauseTimer(){
     if(timerRunning){
         pause_time = std::chrono::high_resolution_clock::now();
@@ -43,6 +48,7 @@ void pauseTimer(){
     }
 }
 
+//If the timer has started, and is not running, and paused is != Minimum time value, start the timer.
 void resumeTimer(){
     if(timerStarted && !timerRunning && pause_time != std::chrono::time_point<std::chrono::steady_clock>::min()){
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(pause_time - start_time);
@@ -73,17 +79,17 @@ int stopwatchMain(){
         cout << "Press S to start the timer, P to pause the timer, R to resume the timer, E to stop the timer, or Q to quit: ";
         cin >> activateTimer;
 
-        if(activateTimer == 'S'){
+        if(tolower((unsigned char)activateTimer) == 's'){
             startTimer();
-        }else if(activateTimer == 'P'){
+        }else if(tolower((unsigned char)activateTimer) == 'p'){
             pauseTimer();
-        }else if(activateTimer == 'R'){
+        }else if(tolower((unsigned char)activateTimer) == 'r'){
             resumeTimer();
-        }else if(activateTimer == 'E' || activateTimer == 'Q'){
+        }else if(tolower((unsigned char)activateTimer) == 'e'){
             stopTimer();
-            if(activateTimer == 'Q'){
-                break;
-            }
+        }else if(tolower((unsigned char)activateTimer) == 'q'){
+            stopTimer();
+            break;
         }
     }
 
