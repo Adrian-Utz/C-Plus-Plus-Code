@@ -7,6 +7,7 @@ using namespace std;
 #include "keytranslator.cpp"
 #include "dinojump.cpp"
 #include "typingtest.cpp"
+#include "stopwatch.cpp"
 /*
 Written on 7/15/2026
 Written by: AJ Utz
@@ -25,6 +26,7 @@ int main(){
         cout << "4. Key Translator\n";
         cout << "5. Dino Jump\n";
         cout << "6. Typing Test\n";
+        cout << "7. Stopwatch\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
 
@@ -56,7 +58,11 @@ int main(){
                 typingMain();
                 cout << endl;
                 break;
-            default:
+            case 7:
+                stopwatchMain();
+                cout << endl;
+                break;
+                default:
                 cout << "Invalid choice. Please try again.\n";
         }
     }while(choice != 0);    
