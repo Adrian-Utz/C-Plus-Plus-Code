@@ -23,4 +23,6 @@ typingtest.cpp - Test you typing skills
 Customize the txt file with the same name to your hearts content.  
 I tried making a copy and paste anti-function, but I don't know if it worked. It didn't work in VScode's terminal.  
 
-stopwatch.cpp - It's a stopwatch. What did you expect?
+stopwatch.cpp - It's a stopwatch. What did you expect?  
+
+coinflip.cpp - Flip a coin a designated number of times. Can be used as a randomizer if your parameter is set to 'tie'. 1000 flips gives you around a 2.52% chance to tie.
