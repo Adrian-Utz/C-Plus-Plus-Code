@@ -8,18 +8,19 @@ using namespace std;
 #include "dinojump.cpp"
 #include "typingtest.cpp"
 #include "stopwatch.cpp"
+#include "coinflip.cpp"
 /*
 Written on 7/15/2026
 Written by: AJ Utz
 
-Last Update: 8/5/2026
+Last Update: 8/18/2026
 */
 
 //Starting location
 int main(){
     int choice;
     do{
-        cout << "0. Exit\n";
+        cout << "\n0. Exit\n";
         cout << "1. Binary to Decimal Converter\n";
         cout << "2. Burger Maker\n";
         cout << "3. Hello World\n";
@@ -27,6 +28,7 @@ int main(){
         cout << "5. Dino Jump\n";
         cout << "6. Typing Test\n";
         cout << "7. Stopwatch\n";
+        cout << "8. Coin Flip\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
 
@@ -62,7 +64,11 @@ int main(){
                 stopwatchMain();
                 cout << endl;
                 break;
-                default:
+            case 8:
+                coinMain();
+                cout << endl;
+                break;
+            default:
                 cout << "Invalid choice. Please try again.\n";
         }
     }while(choice != 0);    
