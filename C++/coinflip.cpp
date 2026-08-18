@@ -24,7 +24,7 @@ int coinrandomizer(int min, int max){
     return(rand() % (max - min + 1) + min);
 }
 
-//Call this to flip a coin. Check who won with the bools. The more flips you add the less likely it will end in a tie. e.g. 1000 flips = 5% tie chance.
+//Call this to flip a coin. Check who won with the bools. The more flips you add the less likely it will end in a tie. e.g. 1000 flips = 2.52% tie chance.
 int coinWrapper(int flips, bool& headsWin, bool& tailsWin, bool& tie){
     int heads = 0;
     int tails = 0;
