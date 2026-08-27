@@ -16,7 +16,7 @@ helloworld.cpp - Classic
 keytranslator.cpp - Tells you the values of a pressed key.  
 E.G. "A" equals 97 in ASCII and 01100001 in binary.
 
-dinojump.cpp - Command line dino game  
+dinojump.cpp - Command line Dino game  
 Space is jump.
 
 typingtest.cpp - Test you typing skills  
@@ -25,4 +25,9 @@ I tried making a copy and paste anti-function, but I don't know if it worked. It
 
 stopwatch.cpp - It's a stopwatch. What did you expect?  
 
-coinflip.cpp - Flip a coin a designated number of times. Can be used as a randomizer if your parameter is set to 'tie'. 1000 flips gives you around a 2.52% chance to tie.
+coinflip.cpp - Flip a coin a designated number of times.  
+Can be used as a randomizer if your parameter is set to 'tie'.  
+1000 flips gives you around a 2.52% chance to tie.
+
+calculator.cpp - Type out a math problem and see what happens.  
+It should follow PEMDAS. (or GEMDAS, but the only allowed grouping symbols are parenthesizes atm) 
