@@ -9,11 +9,14 @@ using namespace std;
 #include "typingtest.cpp"
 #include "stopwatch.cpp"
 #include "coinflip.cpp"
+#include "calculator.cpp"
+#include "timer.cpp"
 /*
+Last Update: 8/27/2026
 Written on 7/15/2026
 Written by: AJ Utz
 
-Last Update: 8/18/2026
+Starting point in the CLI.
 */
 
 //Starting location
@@ -29,6 +32,8 @@ int main(){
         cout << "6. Typing Test\n";
         cout << "7. Stopwatch\n";
         cout << "8. Coin Flip\n";
+        cout << "9. Calculator\n";
+        cout << "10. Timer\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
 
@@ -66,6 +71,14 @@ int main(){
                 break;
             case 8:
                 coinMain();
+                cout << endl;
+                break;
+            case 9:
+                calculatorMain();
+                cout << endl;
+                break;
+            case 10:
+                timerMain();
                 cout << endl;
                 break;
             default:

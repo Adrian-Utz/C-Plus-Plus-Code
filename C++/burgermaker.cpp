@@ -2,12 +2,15 @@
 #include <vector>
 using namespace std;
 
+//Added bacon and cheese as toppings. Added mayo for you guys that like to eat oily eggs.
+
 class Burger {
 public:
     bool meat = false;
     bool vegetarian = false;
     bool ketchup = false;
     bool mustard = false;
+    bool mayo = false; //Forgot mayo :P
     bool lettuce = false;
     bool onions = false;
     bool pickles = false;
@@ -26,13 +29,14 @@ public:
             cout << "2. Vegetarian\n";
             cout << "3. Ketchup\n";
             cout << "4. Mustard\n";
-            cout << "5. Lettuce\n";
-            cout << "6. Onions\n";
-            cout << "7. Pickles\n";
-            cout << "8. Tomato\n";
-            cout << "9. Cheese\n";
-            cout << "10. Bacon\n";
-            cout << "11. Finish selection\n";
+            cout << "5. Mayo\n";
+            cout << "6. Lettuce\n";
+            cout << "7. Onions\n";
+            cout << "8. Pickles\n";
+            cout << "9. Tomato\n";
+            cout << "10. Cheese\n";
+            cout << "11. Bacon\n";
+            cout << "12. Finish selection\n";
             cout << "Enter choice: ";
             cin >> choice;
 
@@ -56,19 +60,20 @@ public:
                     break;
                 case 3: ketchup = true; break;
                 case 4: mustard = true; break;
-                case 5: lettuce = true; break;
-                case 6: onions = true; break;
-                case 7: pickles = true; break;
-                case 8: tomato = true; break;
-                case 9: cheese = true; break;
-                case 10: bacon = true; break;
-                case 11: 
+                case 5: mayo = true; break;
+                case 6: lettuce = true; break;
+                case 7: onions = true; break;
+                case 8: pickles = true; break;
+                case 9: tomato = true; break;
+                case 10: cheese = true; break;
+                case 11: bacon = true; break;
+                case 12: 
                     cout << "Topping selection complete.\n";
                     break;
                 default:
                     cout << "Invalid choice. Please try again.\n";
             }
-        } while (choice != 11);
+        } while (choice != 12);
     }
 
     // Method to display the final burger order
@@ -84,6 +89,7 @@ public:
         bool hasToppings = false;
         if (ketchup) { cout << "- Ketchup\n"; hasToppings = true; }
         if (mustard) { cout << "- Mustard\n"; hasToppings = true; }
+        if (mayo) { cout << "- Mayo\n"; hasToppings = true;}
         if (lettuce) { cout << "- Lettuce\n"; hasToppings = true; }
         if (onions) { cout << "- Onions\n"; hasToppings = true; }
         if (pickles) { cout << "- Pickles\n"; hasToppings = true; }

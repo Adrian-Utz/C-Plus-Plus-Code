@@ -11,7 +11,6 @@ using namespace std;
 
 //My version of the 2D Dino Jump game in the command line, or terminal.
 
-//Basline Width=120 and Height=30
 const int SCREEN_WIDTH = 120;
 const int SCREEN_HEIGHT = 30;
 
@@ -112,6 +111,7 @@ Graphics graphics(){
     return g;
 }
 
+//Basic collision, checks if two sprites intersect
 bool checkCollision(
     int x1, int y1, int w1, int h1,
     int x2, int y2, int w2, int h2)
@@ -230,7 +230,6 @@ int dinoMain() {
             );
         }
 
-
         renderBuffer(buffer);
 
         //Set the ground movement speed
@@ -251,6 +250,7 @@ int dinoMain() {
             }
         }
 
+        //If the colision check activates show the game over screen
         if(
             checkCollision(
                 dinoX + 2,

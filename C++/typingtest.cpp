@@ -22,10 +22,10 @@ Picks a random sentance from the txt file. Then give the user 60 seconds to comp
 
 I tried to make a windows anti-copy-paste deterant but it doesn't work in VScode's terminal.
 
+Last Update: 8/27/2026
 Written on 7/26/2026
 Written by: AJ Utz
 
-Last Update: 8/5/2026
 */
 
 void seedRandomNumberGenerator(){
@@ -139,11 +139,11 @@ int typingMain(){
     const int testDurationSeconds = 60;
     seedRandomNumberGenerator();
 
-#ifdef _WIN32
-    if(!enableAntiPasteMode()){
-        cerr << "Warning: Could not enable anti-paste console mode." << '\n';
-    }
-#endif
+    #ifdef _WIN32
+        if(!enableAntiPasteMode()){
+            cerr << "Warning: Could not enable anti-paste console mode." << '\n';
+        }
+    #endif
 
     try{
         vector<string> lines = readFile(filename); // read the contents of the file into a vector of strings
@@ -173,11 +173,12 @@ int typingMain(){
             cout << "\n[" << secondsRemaining << "s left] " << lines[lineIndex] << '\n';
 
             string input;
-#ifdef _WIN32
-            input = readTypedLineNoPaste();
-#else
-            getline(cin >> ws, input);
-#endif
+            
+            #ifdef _WIN32
+                        input = readTypedLineNoPaste();
+            #else
+                        getline(cin >> ws, input);
+            #endif
 
             totalWordsTyped += countWords(input);
             ++roundsCompleted;
