@@ -1,0 +1,64 @@
+# C-Plus-Plus-Code  
+C++ Coding Practice
+
+
+## Files
+```
+src/
+├── main.cpp                    - Main CLI 
+├── binary2digit.cpp            - Convert a single binary value to a digit
+├── binary2String.cpp           - Convert a binary string to a sentance
+├── burgermaker.cpp             - Make your own burger
+├── calculator.cpp              - Calculate simple math
+├── coinflip.cpp                - Flip a coin('s)
+├── dinojump.cpp                - Dino game in the terminal
+├── helloworld.cpp              - Hello World!
+├── keytranslator.cpp           - See what a specific key's value is
+├── stopwatch.cpp               - Basic stopwatch
+├── string2Binary.cpp           - Get the binary value of a sentance
+├── timer.cpp                   - Set a timer
+├── typingtest.cpp              - Test your typing skills 
+├── typingtest.txt              - Text file for the typing test
+└── README.md                   - This file
+```
+
+
+## Descriptions
+#### main.cpp 
+- Entrance point for the program.  
+
+#### binary2digit.cpp 
+- Convert a binary number to its decimal counterpart. (E.G. 10101111 = 175.) To activate call binaryToDecimal(int).
+
+#### burgermaker.cpp 
+- Make your own burger.  
+
+#### helloworld.cpp 
+- Classic  
+
+#### keytranslator.cpp 
+- Tells you the values of a pressed key. (E.G. "A" equals 97 in ASCII and 01100001 in binary.)
+
+#### dinojump.cpp 
+- Command line Dino game. Space is jump.
+
+#### typingtest.cpp 
+- Test you typing skills. Customize the txt file with the same name to your hearts content. I tried making a copy and paste anti-function, but I don't know if it worked. It didn't work in VScode's terminal.  
+
+#### stopwatch.cpp 
+- It's a stopwatch. What did you expect?  
+
+#### coinflip.cpp 
+- Flip a coin a designated number of times. Can be used as a randomizer if your parameter is set to activate on 'tie'. 1000 flips gives you around a 2.52% chance to tie.
+
+#### calculator.cpp 
+- Type out a math problem and see what happens. It should follow PEMDAS. (or GEMDAS, but the only allowed grouping symbols are parenthesizes atm) 
+
+#### binary2String.cpp
+- Takes a string of binary numbers, seperated by spaces, and reverts them into a string.
+
+#### string2Binary.cpp
+- Takes a string and returns the binary value of each charater.
+
+#### timer.cpp
+- Takes user input in this format: "HH:MM:SS". Then the thread sleeps. Good for delays or timers in multithreaded applications. Sleeping does not consume CPU cycles, and relinquishes control to the OS, avoiding bottlenecks.
