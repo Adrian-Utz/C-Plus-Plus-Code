@@ -11,6 +11,8 @@ using namespace std;
 #include "coinflip.cpp"
 #include "calculator.cpp"
 #include "timer.cpp"
+#include "binary2String.cpp"
+#include "string2Binary.cpp"
 /*
 Last Update: 8/27/2026
 Written on 7/15/2026
@@ -24,7 +26,7 @@ int main(){
     int choice;
     do{
         cout << "\n0. Exit\n";
-        cout << "1. Binary to Decimal Converter\n";
+        cout << "1. Binary Tools\n";
         cout << "2. Burger Maker\n";
         cout << "3. Hello World\n";
         cout << "4. Key Translator\n";
@@ -42,8 +44,32 @@ int main(){
                 cout << "Exiting program.\n";
                 break;
             case 1:
-                b2dmain();
-                cout << endl;
+                int case1choice;
+                cout << "\n0. Exit\n";
+                cout << "1. Binary to Decimal Tool\n";
+                cout << "2. Sentance to Binary Tool\n";
+                cout << "3. Binary to Sentance Tool\n";
+                cout << "What would you like to do: ";
+                cin >> case1choice;
+
+                switch(case1choice){
+                    case 0:
+                        break;
+                    case 1:
+                        b2dmain();
+                        cout << endl;
+                        break;
+                    case 2:
+                        S2Bmain();
+                        cout << endl;
+                        break;
+                    case 3:
+                        B2Smain();
+                        cout << endl;
+                        break;
+                    default:
+                        cout << "Invalid choice please try again.\n";
+                }
                 break;
             case 2:
                 burgermain();

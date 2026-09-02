@@ -12,8 +12,8 @@ using namespace std;
 /*
 A calculator through the command line.
 
-Last Update: 8/27/2026
-Written on 8/19/2026
+Last Update: 9/2/2026
+Written on: 8/19/2026
 Written by: AJ Utz
 */
 
