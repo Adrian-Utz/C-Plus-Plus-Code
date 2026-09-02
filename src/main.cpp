@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 #include "binary2digit.cpp"
 #include "helloworld.cpp"
 #include "burgermaker.cpp"
@@ -23,19 +27,26 @@ Starting point in the CLI.
 
 //Starting location
 int main(){
+    //Here just in case terminal does not support Unicode Box-drawing chars.
+    #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    #endif
+
     int choice;
     do{
-        cout << "\n0. Exit\n";
-        cout << "1. Binary Tools\n";
-        cout << "2. Burger Maker\n";
-        cout << "3. Hello World\n";
-        cout << "4. Key Translator\n";
-        cout << "5. Dino Jump\n";
-        cout << "6. Typing Test\n";
-        cout << "7. Stopwatch\n";
-        cout << "8. Coin Flip\n";
-        cout << "9. Calculator\n";
-        cout << "10. Timer\n";
+        cout << "┌──────────────────────────┐\n";
+        cout << "│ 0. Exit                  │\n";
+        cout << "│ 1. Binary Tools          │\n";       
+        cout << "│ 2. Burger Maker          │\n";
+        cout << "│ 3. Hello World           │\n";
+        cout << "│ 4. Key Translator        │\n";
+        cout << "│ 5. Dino Jump             │\n";
+        cout << "│ 6. Typing Test           │\n";
+        cout << "│ 7. Stopwatch             │\n";
+        cout << "│ 8. Coin Flip             │\n";
+        cout << "│ 9. Calculator            │\n";
+        cout << "│ 10. Timer                │\n";
+        cout << "└──────────────────────────┘\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
 
@@ -45,10 +56,12 @@ int main(){
                 break;
             case 1:
                 int case1choice;
-                cout << "\n0. Exit\n";
-                cout << "1. Binary to Decimal Tool\n";
-                cout << "2. Sentance to Binary Tool\n";
-                cout << "3. Binary to Sentance Tool\n";
+                cout << "┌──────────────────────────────┐\n";
+                cout << "│ 0. Exit                      │\n";
+                cout << "│ 1. Binary to Decimal Tool    │\n";
+                cout << "│ 2. Sentance to Binary Tool   │\n";
+                cout << "│ 3. Binary to Sentance Tool   │\n";
+                cout << "└──────────────────────────────┘\n";
                 cout << "What would you like to do: ";
                 cin >> case1choice;
 

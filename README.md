@@ -2,7 +2,7 @@
 C++ Coding Practice
 
 
-## Files
+## Files:
 ```
 src/
 ├── main.cpp                    - Main CLI 
@@ -22,8 +22,10 @@ src/
 └── README.md                   - This file
 ```
 
+## Changes:
+- Added Unicode Box Drawing support.
 
-## Descriptions
+## Descriptions:
 #### [main.cpp](https://github.com/Adrian-Utz/C-Plus-Plus-Code/blob/main/src/main.cpp)
 - Entrance point for the program.  
 
