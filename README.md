@@ -89,3 +89,9 @@ src/
 
 #### [timer.cpp](https://github.com/Adrian-Utz/C-Plus-Plus-Code/blob/main/src/timer.cpp)
 - Takes user input in this format: "HH:MM:SS". Then the thread sleeps. Good for delays or timers in multithreaded applications. Sleeping does not consume CPU cycles, and relinquishes control to the OS, avoiding bottlenecks.
+
+#### [memoryallocation.cpp](https://github.com/Adrian-Utz/C-Plus-Plus-Code/blob/main/src/memoryallocation.cpp)
+- Playing around with pointers.
+
+#### [asteroids.cpp](https://github.com/Adrian-Utz/C-Plus-Plus-Code/blob/main/src/asteroids.cpp)
+- Take control of a space shuttle and shoot down asteroids with the spacebar. Asteroids split after three hits. Large asteroids count as 2 points and small asteroids count as 10.
