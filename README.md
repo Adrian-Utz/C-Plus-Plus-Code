@@ -6,6 +6,7 @@ C++ Coding Practice
 ```
 src/
 ├── main.cpp                    - Main CLI 
+├── asteroids.cpp               - Asteroids game in the terminal
 ├── binary2digit.cpp            - Convert a single binary value to a digit
 ├── binary2String.cpp           - Convert a binary string to a sentance
 ├── burgermaker.cpp             - Make your own burger
@@ -14,6 +15,7 @@ src/
 ├── dinojump.cpp                - Dino game in the terminal
 ├── helloworld.cpp              - Hello World!
 ├── keytranslator.cpp           - See what a specific key's value is
+├── memoryallocation.cpp        - Playing around with pointers in c++
 ├── stopwatch.cpp               - Basic stopwatch
 ├── string2Binary.cpp           - Get the binary value of a sentance
 ├── timer.cpp                   - Set a timer
