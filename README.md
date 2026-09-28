@@ -22,6 +22,31 @@ src/
 └── README.md                   - This file
 ```
 
+## CLI format:
+
+```
+                                ┌──────────────────────────────┐
+                                │ 0. Exit                      │
+                                │ 1. Binary to Decimal Tool    │
+                                │ 2. Sentance to Binary Tool   │
+                                │ 3. Binary to Sentance Tool   │
+                                ├──────────────────────────────┘
+                                │    ┌──────────────────────┐
+                                │    │ 0. Exit              │
+┌──────────────────────────┐    │    │ 1. Dino Jump Game    │
+│ 0. Exit                  │    │    │ 2. Typing Test Game  │
+│ 1. Binary Tools          ├────┘    │ 3. Burger Maker      │
+│ 2. Hello World           │         │ 4. Asteroids         │
+│ 3. Key Translator        │         ├──────────────────────┘
+│ 4. Games                 ├─────────┘
+│ 5. Time Tools            ├─────────┐
+│ 6. Coin Flip             │         ├───────────────────┐
+│ 7. Calculator            │         │ 0. Exit           │
+└──────────────────────────┘         │ 2. Stopwatch Tool │
+                                     │ 2. Timer Tool     │
+                                     └───────────────────┘ 
+```
+
 ## Changes:
 - Added Unicode Box Drawing support.
 
@@ -51,7 +76,7 @@ src/
 - It's a stopwatch. What did you expect?  
 
 #### [coinflip.cpp](https://github.com/Adrian-Utz/C-Plus-Plus-Code/blob/main/src/coinflip.cpp)
-- Flip a coin a designated number of times. Can be used as a randomizer if your parameter is set to activate on 'tie'. 1000 flips gives you around a 2.52% chance to tie.
+- Flip a coin a designated number of times. Can be used as a randomizer if your parameter is set to activate on 'tie'. 1000 flips gives you around a .253% chance to tie, or 1 in 395.
 
 #### [calculator.cpp](https://github.com/Adrian-Utz/C-Plus-Plus-Code/blob/main/src/calculator.cpp)
 - Type out a math problem and see what happens. It should follow PEMDAS. (or GEMDAS, but the only allowed grouping symbols are parenthesizes atm) 

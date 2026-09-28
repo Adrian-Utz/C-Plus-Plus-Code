@@ -9,8 +9,13 @@
 
 using namespace std;
 
-//My version of the 2D Dino Jump game in the command line, or terminal.
+/*
+My version of the 2D Dino Jump game in the command line, or terminal.
 
+Last Update: 9/18/2026
+Written on 7/20/2026
+Written by: AJ Utz
+*/
 const int SCREEN_WIDTH = 120;
 const int SCREEN_HEIGHT = 30;
 
