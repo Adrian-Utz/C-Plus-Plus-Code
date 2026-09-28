@@ -42,8 +42,8 @@ src/
 │ 5. Time Tools            ├─────────┐
 │ 6. Coin Flip             │         ├───────────────────┐
 │ 7. Calculator            │         │ 0. Exit           │
-└──────────────────────────┘         │ 2. Stopwatch Tool │
-                                     │ 2. Timer Tool     │
+│ 8. Pointer Test          │         │ 2. Stopwatch Tool │
+└──────────────────────────┘         │ 2. Timer Tool     │
                                      └───────────────────┘ 
 ```
 

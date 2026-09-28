@@ -45,6 +45,7 @@ int main(){
         cout << "│ 5. Time Tools            │\n";
         cout << "│ 6. Coin Flip             │\n";
         cout << "│ 7. Calculator            │\n";
+        cout << "│ 8. Pointer Test          │\n";
         cout << "└──────────────────────────┘\n";
         cout << "Enter what program you wish to run: ";
         cin >> choice;
